@@ -14,7 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
 
     var statusBar: StatusBarController?
-    var popover: NSPopover!
+    var viewController: ViewController!
+    let popover = NSPopover()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -23,15 +24,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.orderOut(self)
 
         //
-        popover = NSPopover.init()
-        popover.contentSize = NSSize(width: 360, height: 360)
-        popover.contentViewController = window.contentViewController
+        viewController = ViewController.freshController()
+
+        popover.contentSize = NSSize(width: 640, height: 480)
+        popover.contentViewController = viewController
+        popover.behavior = NSPopover.Behavior.semitransient
 
         statusBar = StatusBarController.init(popover)
+
+//        viewController.checkHelperVersionAndUpdateIfNecessary { installed in
+//            if !installed {
+                self.viewController.installHelperDaemon()
+//            }
+            // Create an empty authorization reference
+            self.viewController.initAuthorizationRef()
+//        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        viewController.freeAuthorizationRef()
     }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {

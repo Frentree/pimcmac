@@ -4,5 +4,10 @@
 <dict>
 	<key>LSUIElement</key>
 	<true/>
+	<key>SMPrivilegedExecutables</key>
+	<dict>
+		<key>com.frentree.recon.PIMCPrivilegedTaskRunnerHelper</key>
+		<string>identifier "com.frentree.recon.PIMCPrivilegedTaskRunnerHelper" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: gontai@gmail.com (99AN8Y9FF5)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+	</dict>
 </dict>
 </plist>
