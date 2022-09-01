@@ -10,7 +10,7 @@ import AppKit
 
 class StatusBarController {
     private var statusBar: NSStatusBar
-    private var statusItem: NSStatusItem
+    var statusItem: NSStatusItem
 
     private var popover: NSPopover
 

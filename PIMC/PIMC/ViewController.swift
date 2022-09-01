@@ -39,11 +39,31 @@ class ViewController: NSViewController {
     }
 
     func run() {
+        printToResult(data: "Wait for result ...\n")
         callHelperWithAuthorization()
     }
 
     func printToResult(data:String) {
         resultTextView.string = "\(data)"
+    }
+
+    func changeIconFromResult(result: String) {
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        let statusBarButton = appDelegate.statusBar?.statusItem.button
+
+
+        // icon
+        if result.containsIgnoringCase(find: "Test SUCCESS.") {
+            if isDarkMode {
+                statusBarButton?.image = #imageLiteral(resourceName: "logo white")
+            } else {
+                statusBarButton?.image = #imageLiteral(resourceName: "logo black")
+            }
+        } else {
+            statusBarButton?.image = #imageLiteral(resourceName: "logo gray")
+        }
+        statusBarButton?.image?.size = NSSize(width: 18.0, height: 18.0)
+        statusBarButton?.image?.isTemplate = false
     }
 
     //
@@ -53,7 +73,7 @@ class ViewController: NSViewController {
                DispatchQueue.main.async {
                    self.resultTextView.string += "\n" + message
                }
-           }else {
+           } else {
                logArchive += "\n" + message
            }
        }
@@ -216,6 +236,7 @@ class ViewController: NSViewController {
                     // Run UI Updates
                     print("\n=== result ===\n\(reply)\n=== end ===\n")
                     self.printToResult(data: reply)
+                    self.changeIconFromResult(result: reply)
                 }
             }
         })

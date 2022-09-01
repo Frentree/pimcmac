@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F32C451428C0A827000A9FDE /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32C451328C0A827000A9FDE /* extension.swift */; };
+		F32C451528C0A827000A9FDE /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32C451328C0A827000A9FDE /* extension.swift */; };
 		F36EBD2928B8CA7400C0E8C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EBD2828B8CA7400C0E8C3 /* AppDelegate.swift */; };
 		F36EBD2B28B8CA7400C0E8C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EBD2A28B8CA7400C0E8C3 /* ViewController.swift */; };
 		F36EBD2D28B8CA7600C0E8C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36EBD2C28B8CA7600C0E8C3 /* Assets.xcassets */; };
@@ -46,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F32C451328C0A827000A9FDE /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		F36EBD2528B8CA7400C0E8C3 /* PIMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PIMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36EBD2828B8CA7400C0E8C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36EBD2A28B8CA7400C0E8C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 				F36EBD2C28B8CA7600C0E8C3 /* Assets.xcassets */,
 				F36EBD2E28B8CA7600C0E8C3 /* Main.storyboard */,
 				F36EBD3128B8CA7600C0E8C3 /* PIMC.entitlements */,
+				F32C451328C0A827000A9FDE /* extension.swift */,
 			);
 			path = PIMC;
 			sourceTree = "<group>";
@@ -227,6 +231,7 @@
 				F36EBD5128BC908800C0E8C3 /* PrivilegedTaskRunnerHelper.swift in Sources */,
 				F36EBD2928B8CA7400C0E8C3 /* AppDelegate.swift in Sources */,
 				F36EBD5328BC90BA00C0E8C3 /* AppAuthorizationRights.swift in Sources */,
+				F32C451428C0A827000A9FDE /* extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +242,7 @@
 				F36EBD4128BC70B300C0E8C3 /* main.swift in Sources */,
 				F36EBD4A28BC8D4200C0E8C3 /* ProcessHelper.swift in Sources */,
 				F36EBD5028BC908300C0E8C3 /* PrivilegedTaskRunnerHelper.swift in Sources */,
+				F32C451528C0A827000A9FDE /* extension.swift in Sources */,
 				F36EBD4D28BC8EDB00C0E8C3 /* RemoteProcessProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +382,7 @@
 				CODE_SIGN_ENTITLEMENTS = PIMC/PIMC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = WGQ89P2RBG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -405,7 +411,7 @@
 				CODE_SIGN_ENTITLEMENTS = PIMC/PIMC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = WGQ89P2RBG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
