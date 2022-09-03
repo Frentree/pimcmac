@@ -12,7 +12,7 @@ class PrivilegedTaskRunnerHelper: NSObject, RemoteProcessProtocol, NSXPCListener
     var listener:NSXPCListener
 
     let commandPath:String = "/usr/local/er2/er2-config"
-    let commandArguments:[String] = ["-i", "192.168.0.37", "-t"]
+    let commandArguments:[String] = ["-t"]
 
     override init() {
         self.listener = NSXPCListener(machServiceName:HelperConstants.machServiceName)
