@@ -44,26 +44,22 @@ class ViewController: NSViewController {
     }
 
     func printToResult(data:String) {
-        resultTextView.string = "\(data)"
+//        resultTextView.string = "\(data)"
     }
 
     func changeIconFromResult(result: String) {
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
-        let statusBarButton = appDelegate.statusBar?.statusItem.button
-
 
         // icon
         if result.containsIgnoringCase(find: "Test SUCCESS.") {
             if isDarkMode {
-                statusBarButton?.image = #imageLiteral(resourceName: "logo white")
+                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo white"))
             } else {
-                statusBarButton?.image = #imageLiteral(resourceName: "logo black")
+                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo black"))
             }
         } else {
-            statusBarButton?.image = #imageLiteral(resourceName: "logo gray")
+            appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo gray"))
         }
-        statusBarButton?.image?.size = NSSize(width: 18.0, height: 18.0)
-        statusBarButton?.image?.isTemplate = false
     }
 
     //

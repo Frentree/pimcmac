@@ -10,43 +10,28 @@ import AppKit
 
 class StatusBarController {
     private var statusBar: NSStatusBar
-    var statusItem: NSStatusItem
 
-    private var popover: NSPopover
+    private var menu: NSMenu
+    private let statusItem = NSStatusBar.system.statusItem(withLength: 18.0)
 
-    init(_ popover: NSPopover) {
-        self.popover = popover
+    init(_ menu: NSMenu) {
+        self.menu = menu
         statusBar = NSStatusBar.init()
-
-        // 메뉴바 길이 고정
-        statusItem = statusBar.statusItem(withLength: 30.0)
 
         if let statusBarButton = statusItem.button {
             statusBarButton.image = #imageLiteral(resourceName: "logo gray")
             statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
             statusBarButton.image?.isTemplate = false
-
-            statusBarButton.action = #selector(togglePopover(sender:))
-            statusBarButton.target = self
         }
+
+        statusItem.menu = menu
     }
 
-    @objc func togglePopover(sender: AnyObject) {
-        if (popover.isShown) {
-            hidePopover(sender)
-        }
-        else {
-            showPopover(sender)
-        }
-    }
-
-    func showPopover(_ sender: AnyObject) {
+    func changeIcon(image: NSImage) {
         if let statusBarButton = statusItem.button {
-            popover.show(relativeTo: statusBarButton.bounds, of: statusBarButton, preferredEdge: NSRectEdge.maxY)
+            statusBarButton.image = image
+            statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
+            statusBarButton.image?.isTemplate = false
         }
-    }
-
-    func hidePopover(_ sender: AnyObject) {
-        popover.performClose(sender)
     }
 }

@@ -10,7 +10,14 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    
+    @IBOutlet weak var menu: NSMenu!
+    @IBOutlet weak var startPIMCService: NSMenuItem!
+
+    @IBAction func actionStartPIMCService(_ sender: Any) {
+        viewController.run()
+    }
+
+
     var window: NSWindow!
 
     var statusBar: StatusBarController?
@@ -25,20 +32,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         //
         viewController = ViewController.freshController()
+        statusBar = StatusBarController.init(menu)
 
-        popover.contentSize = NSSize(width: 640, height: 480)
-        popover.contentViewController = viewController
-        popover.behavior = NSPopover.Behavior.semitransient
-
-        statusBar = StatusBarController.init(popover)
-
-//        viewController.checkHelperVersionAndUpdateIfNecessary { installed in
-//            if !installed {
+        viewController.checkHelperVersionAndUpdateIfNecessary { installed in
+            if !installed {
                 self.viewController.installHelperDaemon()
-//            }
+            }
             // Create an empty authorization reference
             self.viewController.initAuthorizationRef()
-//        }
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
