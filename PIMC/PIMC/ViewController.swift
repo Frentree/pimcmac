@@ -16,7 +16,9 @@ class ViewController: NSViewController {
     var connection: NSXPCConnection?
     var authRef: AuthorizationRef?
 
-
+    //
+    var mTimer : Timer?
+    
     @IBOutlet weak var version: NSTextField!
     @IBOutlet var resultTextView: NSTextView!
 
@@ -40,6 +42,25 @@ class ViewController: NSViewController {
 
     func run() {
         printToResult(data: "Wait for result ...\n")
+        
+        // checking process
+        let result = shell("ps -aef | grep er2 | grep -v grep")
+        if result.contains("er2-agent") {
+            if let timer = mTimer {
+                if !timer.isValid {
+                    mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+                }
+            }else{
+                mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+            }
+        } else {
+            // set default icon
+            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo gray"))
+        }
+    }
+    
+    @objc func timerCallback() {
         callHelperWithAuthorization()
     }
 
