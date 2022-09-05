@@ -23,6 +23,7 @@
 		F36EBD5128BC908800C0E8C3 /* PrivilegedTaskRunnerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EBD4F28BC908300C0E8C3 /* PrivilegedTaskRunnerHelper.swift */; };
 		F36EBD5328BC90BA00C0E8C3 /* AppAuthorizationRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EBD5228BC90BA00C0E8C3 /* AppAuthorizationRights.swift */; };
 		F36EBD5528BC950500C0E8C3 /* com.frentree.recon.PIMCPrivilegedTaskRunnerHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = F36EBD3E28BC70B300C0E8C3 /* com.frentree.recon.PIMCPrivilegedTaskRunnerHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F3E6453828C56D0C00BE4B6A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6453728C56D0C00BE4B6A /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +66,7 @@
 		F36EBD4C28BC8EDB00C0E8C3 /* RemoteProcessProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProcessProtocol.swift; sourceTree = "<group>"; };
 		F36EBD4F28BC908300C0E8C3 /* PrivilegedTaskRunnerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegedTaskRunnerHelper.swift; sourceTree = "<group>"; };
 		F36EBD5228BC90BA00C0E8C3 /* AppAuthorizationRights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuthorizationRights.swift; sourceTree = "<group>"; };
+		F3E6453728C56D0C00BE4B6A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				F36EBD2C28B8CA7600C0E8C3 /* Assets.xcassets */,
 				F36EBD2E28B8CA7600C0E8C3 /* Main.storyboard */,
 				F36EBD3128B8CA7600C0E8C3 /* PIMC.entitlements */,
+				F3E6453728C56D0C00BE4B6A /* AboutViewController.swift */,
 				F32C451328C0A827000A9FDE /* extension.swift */,
 			);
 			path = PIMC;
@@ -227,6 +230,7 @@
 				F36EBD2B28B8CA7400C0E8C3 /* ViewController.swift in Sources */,
 				F36EBD4E28BC8F4100C0E8C3 /* RemoteProcessProtocol.swift in Sources */,
 				F36EBD4B28BC8D5400C0E8C3 /* ProcessHelper.swift in Sources */,
+				F3E6453828C56D0C00BE4B6A /* AboutViewController.swift in Sources */,
 				F36EBD3828B8CAA600C0E8C3 /* StatusBarController.swift in Sources */,
 				F36EBD5128BC908800C0E8C3 /* PrivilegedTaskRunnerHelper.swift in Sources */,
 				F36EBD2928B8CA7400C0E8C3 /* AppDelegate.swift in Sources */,

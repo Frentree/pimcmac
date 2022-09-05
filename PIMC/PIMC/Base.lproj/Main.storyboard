@@ -25,7 +25,7 @@
                                         <menuItem title="About PIMC" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <action selector="actionAbout:" target="Voe-Tx-rLC" id="znc-Oi-Dyh"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -742,7 +742,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="425" height="210"/>
+                                            <size key="minSize" width="440" height="210"/>
                                             <size key="maxSize" width="480" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content=" ">
@@ -795,6 +795,73 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--About PIMC-->
+        <scene sceneID="9H8-Ro-bUD">
+            <objects>
+                <viewController title="About PIMC" storyboardIdentifier="AboutViewController" id="Sti-bX-hqs" customClass="AboutViewController" customModule="CustomAboutWindow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="X6q-na-fF3">
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="192"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-pB-ZNB">
+                                <rect key="frame" x="86" y="87" width="84" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="d4k-zZ-Rc3"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="CUf-oV-I3w"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FaZ-dd-tvc">
+                                <rect key="frame" x="18" y="62" width="220" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="App Name" id="Bof-Ma-2Sf">
+                                    <font key="font" metaFont="systemBold" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vpi-pI-Gsp">
+                                <rect key="frame" x="18" y="20" width="220" height="13"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Private IP Address not found." id="5FI-Iy-OOF">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ARl-w8-9BV">
+                                <rect key="frame" x="18" y="41" width="220" height="13"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="version" id="HLO-Bt-67O">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="FaZ-dd-tvc" firstAttribute="leading" secondItem="X6q-na-fF3" secondAttribute="leading" constant="20" id="05t-4D-LTE"/>
+                            <constraint firstItem="vpi-pI-Gsp" firstAttribute="leading" secondItem="X6q-na-fF3" secondAttribute="leading" constant="20" id="6Tn-Qs-M61"/>
+                            <constraint firstAttribute="bottom" secondItem="vpi-pI-Gsp" secondAttribute="bottom" constant="20" id="CZ4-zU-fXU"/>
+                            <constraint firstItem="ARl-w8-9BV" firstAttribute="leading" secondItem="X6q-na-fF3" secondAttribute="leading" constant="20" id="FVe-oY-Eoq"/>
+                            <constraint firstAttribute="trailing" secondItem="vpi-pI-Gsp" secondAttribute="trailing" constant="20" id="Kn8-hK-u2h"/>
+                            <constraint firstAttribute="trailing" secondItem="FaZ-dd-tvc" secondAttribute="trailing" constant="20" id="Ljv-or-Cev"/>
+                            <constraint firstAttribute="trailing" secondItem="ARl-w8-9BV" secondAttribute="trailing" constant="20" id="Obr-zR-VBB"/>
+                            <constraint firstItem="eb5-pB-ZNB" firstAttribute="top" secondItem="X6q-na-fF3" secondAttribute="top" constant="20" id="P9q-cK-i5u"/>
+                            <constraint firstItem="FaZ-dd-tvc" firstAttribute="top" secondItem="eb5-pB-ZNB" secondAttribute="bottom" constant="8" id="Qih-fW-kEP"/>
+                            <constraint firstItem="vpi-pI-Gsp" firstAttribute="top" secondItem="ARl-w8-9BV" secondAttribute="bottom" constant="8" id="R1F-AW-3RM"/>
+                            <constraint firstItem="ARl-w8-9BV" firstAttribute="top" secondItem="FaZ-dd-tvc" secondAttribute="bottom" constant="8" id="b9w-4j-YCM"/>
+                            <constraint firstItem="eb5-pB-ZNB" firstAttribute="centerX" secondItem="X6q-na-fF3" secondAttribute="centerX" id="tpF-dV-0AM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appCopyrightLabel" destination="vpi-pI-Gsp" id="sfg-BK-FKb"/>
+                        <outlet property="appIPLabel" destination="vpi-pI-Gsp" id="0Em-V9-7pk"/>
+                        <outlet property="appIconImageView" destination="eb5-pB-ZNB" id="ll2-0D-0tM"/>
+                        <outlet property="appNameLabel" destination="FaZ-dd-tvc" id="RXx-BP-a5M"/>
+                        <outlet property="appVersionLabel" destination="ARl-w8-9BV" id="RgP-dZ-cXC"/>
+                    </connections>
+                </viewController>
+                <customObject id="Ka1-lw-CwZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="250"/>
         </scene>
     </scenes>
 </document>

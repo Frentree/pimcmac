@@ -17,11 +17,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         viewController.run()
     }
 
-
+    @IBAction func actionAbout(_ sender: Any) {
+        let window = NSWindow(contentViewController: aboutViewController)
+        window.center()
+        let windowController = NSWindowController(window: window)
+        windowController.showWindow(nil)
+    }
+    
     var window: NSWindow!
 
     var statusBar: StatusBarController?
     var viewController: ViewController!
+    var aboutViewController: AboutViewController!
     let popover = NSPopover()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -32,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         //
         viewController = ViewController.freshController()
+        aboutViewController = AboutViewController.freshController()
         statusBar = StatusBarController.init(menu)
 
         viewController.checkHelperVersionAndUpdateIfNecessary { installed in
