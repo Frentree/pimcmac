@@ -48,10 +48,10 @@ class ViewController: NSViewController {
         if result.contains("er2-agent") {
             if let timer = mTimer {
                 if !timer.isValid {
-                    mTimer = Timer.scheduledTimer(timeInterval: TIME_INTERVAL, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+                    mTimer = Timer.scheduledTimer(timeInterval: Constants.TIME_INTERVAL, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
                 }
             }else{
-                mTimer = Timer.scheduledTimer(timeInterval: TIME_INTERVAL, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+                mTimer = Timer.scheduledTimer(timeInterval: Constants.TIME_INTERVAL, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
             }
         } else {
             // set default icon
