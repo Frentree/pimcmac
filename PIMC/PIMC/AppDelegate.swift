@@ -41,19 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         viewController = ViewController.freshController()
         aboutViewController = AboutViewController.freshController()
         statusBar = StatusBarController.init(menu)
-
-        viewController.checkHelperVersionAndUpdateIfNecessary { installed in
-            if !installed {
-                self.viewController.installHelperDaemon()
-            }
-            // Create an empty authorization reference
-            self.viewController.initAuthorizationRef()
-        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
-        viewController.freeAuthorizationRef()
     }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {

@@ -6,5 +6,5 @@
 //
 
 class Constants {
-    static let TIME_INTERVAL = 5 * 60.0 // 5 min
+    static let TIME_INTERVAL = 1 * 60.0 // 1 min
 }
