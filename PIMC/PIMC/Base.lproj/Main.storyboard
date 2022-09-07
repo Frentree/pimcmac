@@ -799,15 +799,15 @@
         <!--About PIMC-->
         <scene sceneID="9H8-Ro-bUD">
             <objects>
-                <viewController title="About PIMC" storyboardIdentifier="AboutViewController" id="Sti-bX-hqs" customClass="AboutViewController" customModule="CustomAboutWindow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="About PIMC" storyboardIdentifier="AboutViewController" id="Sti-bX-hqs" customClass="AboutViewController" customModule="PIMC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="X6q-na-fF3">
                         <rect key="frame" x="0.0" y="0.0" width="256" height="192"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-pB-ZNB">
-                                <rect key="frame" x="86" y="87" width="84" height="85"/>
+                                <rect key="frame" x="36" y="87" width="184" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="d4k-zZ-Rc3"/>
+                                    <constraint firstAttribute="width" constant="184" id="d4k-zZ-Rc3"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="CUf-oV-I3w"/>
                             </imageView>

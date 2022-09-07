@@ -20,7 +20,7 @@ class AboutViewController: NSViewController {
 
         // Read the app's info and reflect that content in the window's subviews:
 
-        self.appIconImageView.image = NSApp.applicationIconImage
+        self.appIconImageView.image = #imageLiteral(resourceName: "ci")
         if let infoDictionary = Bundle.main.infoDictionary {
             self.appNameLabel.stringValue = infoDictionary["CFBundleName"] as? String ?? ""
             self.appVersionLabel.stringValue = infoDictionary["CFBundleShortVersionString"] as? String ?? ""
