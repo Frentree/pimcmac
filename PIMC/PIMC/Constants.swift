@@ -7,4 +7,5 @@
 
 class Constants {
     static let TIME_INTERVAL = 1 * 60.0 // 1 min
+    static let HOMEPAGE = "https://www.apple.com"
 }

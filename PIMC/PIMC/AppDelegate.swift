@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import OSLog
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,6 +16,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBAction func actionStartPIMCService(_ sender: Any) {
         viewController.run()
+    }
+
+    @IBAction func actionHomepage(_ sender: Any) {
+        let url = URL(string: Constants.HOMEPAGE)!
+        if NSWorkspace.shared.open(url) {
+            print("default browser was successfully opened")
+
+        }
+    }
+
+    @IBAction func actionServiceCheck(_ sender: Any) {
+        os_log("actionServiceCheck")
     }
 
     @IBAction func actionAbout(_ sender: Any) {

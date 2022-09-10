@@ -16,7 +16,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="PIMC" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="Start PIMC Service" id="422-8S-VTb">
+                                        <menuItem title="Start PIMC Service" hidden="YES" id="422-8S-VTb">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="actionStartPIMCService:" target="Voe-Tx-rLC" id="bMP-Qg-bmJ"/>
@@ -28,10 +28,22 @@
                                                 <action selector="actionAbout:" target="Voe-Tx-rLC" id="znc-Oi-Dyh"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Homepage" id="dZS-Rn-1A6">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="actionHomepage:" target="Voe-Tx-rLC" id="XIb-1r-S8e"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Service check" id="s1S-Gh-481">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="actionServiceCheck:" target="Voe-Tx-rLC" id="A4y-VZ-cvb"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" hidden="YES" keyEquivalent="," id="BOF-NM-1cW"/>
                                         <menuItem isSeparatorItem="YES" hidden="YES" id="wFC-TO-SCJ"/>
-                                        <menuItem title="Services" id="NMo-om-nkz">
+                                        <menuItem title="Services" hidden="YES" enabled="NO" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Services" systemMenu="services" showsStateColumn="NO" autoenablesItems="NO" id="hz9-B4-Xy5"/>
                                         </menuItem>
