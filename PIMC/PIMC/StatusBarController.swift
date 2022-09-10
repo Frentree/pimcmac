@@ -19,7 +19,7 @@ class StatusBarController {
         statusBar = NSStatusBar.init()
 
         if let statusBarButton = statusItem.button {
-            statusBarButton.image = #imageLiteral(resourceName: "logo gray")
+            changeIconDefault()
             statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
             statusBarButton.image?.isTemplate = false
         }
@@ -32,6 +32,12 @@ class StatusBarController {
             statusBarButton.image = image
             statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
             statusBarButton.image?.isTemplate = false
+        }
+    }
+
+    func changeIconDefault() {
+        if let statusBarButton = statusItem.button {
+            statusBarButton.image = #imageLiteral(resourceName: "logo colorful")
         }
     }
 }

@@ -71,7 +71,7 @@ class ViewController: NSViewController {
         } else {
             // set default icon
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
-            appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo gray"))
+            appDelegate.statusBar?.changeIconDefault()
         }
     }
 
@@ -91,7 +91,7 @@ class ViewController: NSViewController {
                 appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo black"))
             }
         } else {
-            appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo gray"))
+            appDelegate.statusBar?.changeIconDefault()
         }
     }
 
