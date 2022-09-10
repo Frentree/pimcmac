@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func actionAbout(_ sender: Any) {
         let window = NSWindow(contentViewController: aboutViewController)
         window.center()
+        window.level = .statusBar
         let windowController = NSWindowController(window: window)
         windowController.showWindow(nil)
     }
