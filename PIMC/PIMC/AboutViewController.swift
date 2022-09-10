@@ -24,8 +24,8 @@ class AboutViewController: NSViewController {
         if let infoDictionary = Bundle.main.infoDictionary {
             self.appNameLabel.stringValue = infoDictionary["CFBundleName"] as? String ?? ""
             self.appVersionLabel.stringValue = infoDictionary["CFBundleShortVersionString"] as? String ?? ""
-            let ip192 = getIFAddresses().filter { $0.contains(find:"192.") }.first
-            self.appIPLabel.stringValue = ip192 ?? "Private IP Address not found."
+//            let ip192 = getIFAddresses().filter { $0.contains(find:"192.") }.first
+//            self.appIPLabel.stringValue = ip192 ?? "Private IP Address not found."
 //            self.appCopyrightLabel.stringValue = infoDictionary["NSHumanReadableCopyright"] as? String ?? ""
 
             // If you add more custom subviews to display additional information
