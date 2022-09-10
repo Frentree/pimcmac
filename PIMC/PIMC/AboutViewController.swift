@@ -23,7 +23,11 @@ class AboutViewController: NSViewController {
         self.appIconImageView.image = #imageLiteral(resourceName: "ci")
         if let infoDictionary = Bundle.main.infoDictionary {
             self.appNameLabel.stringValue = infoDictionary["CFBundleName"] as? String ?? ""
-            self.appVersionLabel.stringValue = infoDictionary["CFBundleShortVersionString"] as? String ?? ""
+
+            let appVersion = infoDictionary["CFBundleShortVersionString"] as? String ?? "1.0.0"
+            let agentVersion = infoDictionary["Agent version"] as? String ?? "1.0.0"
+            self.appVersionLabel.stringValue = "Agent version : \(agentVersion)\nApp version : \(appVersion)"
+
 //            let ip192 = getIFAddresses().filter { $0.contains(find:"192.") }.first
 //            self.appIPLabel.stringValue = ip192 ?? "Private IP Address not found."
 //            self.appCopyrightLabel.stringValue = infoDictionary["NSHumanReadableCopyright"] as? String ?? ""
