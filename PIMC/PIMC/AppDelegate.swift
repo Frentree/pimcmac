@@ -42,6 +42,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         viewController = ViewController.freshController()
         aboutViewController = AboutViewController.freshController()
         statusBar = StatusBarController.init(menu)
+
+        // auto run with start app
+        viewController.run()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
