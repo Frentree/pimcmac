@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,13 +28,13 @@
                                                 <action selector="actionAbout:" target="Voe-Tx-rLC" id="znc-Oi-Dyh"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Homepage" id="dZS-Rn-1A6">
+                                        <menuItem title="Homepage" hidden="YES" id="dZS-Rn-1A6">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="actionHomepage:" target="Voe-Tx-rLC" id="XIb-1r-S8e"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Service check" id="s1S-Gh-481">
+                                        <menuItem title="Service check" hidden="YES" id="s1S-Gh-481">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="actionServiceCheck:" target="Voe-Tx-rLC" id="A4y-VZ-cvb"/>
@@ -66,7 +66,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit PIMC" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit PIMC" hidden="YES" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
