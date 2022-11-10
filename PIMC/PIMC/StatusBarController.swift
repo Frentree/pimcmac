@@ -37,7 +37,7 @@ class StatusBarController {
 
     func changeIconDefault() {
         if let statusBarButton = statusItem.button {
-            statusBarButton.image = #imageLiteral(resourceName: "logo colorful")
+            statusBarButton.image = #imageLiteral(resourceName: "logo gray")
         }
     }
 }
