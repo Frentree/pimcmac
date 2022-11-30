@@ -69,5 +69,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        NSApp.hide(self)
+    }
 }
 
