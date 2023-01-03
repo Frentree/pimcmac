@@ -1,0 +1,36 @@
+productsign --sign "Developer ID Installer: Changyoung Jang (JCATD8L33Y)" "./PIMC.app" "./sign/PIMC.app"
+
+
+xcrun altool --notarize-app --primary-bundle-id com.frentree.recon --username "frentreedev@gmail.com" --password "wqnv-bxzo-nzyk-gosp" --file "./sign/PIMC_Mac_OA_1.0.1.pkg"
+
+RequestUUID = 42e3431e-04d1-4006-823a-213cc52dc2c2
+
+xcrun altool --notarization-info 42e3431e-04d1-4006-823a-213cc52dc2c2 -username "frentreedev@gmail.com" --password "wqnv-bxzo-nzyk-gosp"
+
+
+
+============= install PKG
+productsign --sign "Developer ID Installer: Changyoung Jang (JCATD8L33Y)" "./PIMC_Mac_OA_1.0.1.pkg" "./sign/PIMC_Mac_OA_1.0.1.pkg"
+
+
+xcrun altool --notarize-app --primary-bundle-id com.frentree.recon --username "frentreedev@gmail.com" --password "wqnv-bxzo-nzyk-gosp" --file "./sign/PIMC_Mac_OA_1.0.1.pkg"
+
+RequestUUID = 4f0d50b2-d2cc-48ad-9047-a78406b45bfa
+
+xcrun altool --notarization-info 4f0d50b2-d2cc-48ad-9047-a78406b45bfa -username "frentreedev@gmail.com" --password "wqnv-bxzo-nzyk-gosp"
+
+xcrun stapler staple ./sign/PIMC_Mac_OA_1.0.3.pkg
+
+
+============= uninstall PKG
+productsign --sign "Developer ID Installer: frentree (JCATD8L33Y)" "./PIMC_Mac_uninstall_1.0.3.pkg" "./sign/PIMC_Mac_uninstall_1.0.3.pkg"
+
+
+xcrun altool --notarize-app --primary-bundle-id com.frentree.recon --username "frentreedev@gmail.com" --password "wqnv-bxzo-nzyk-gosp" --file "./sign/PIMC_Mac_uninstall_1.0.3.pkg"
+
+RequestUUID = 9bee14cb-7ef3-4d8b-80fd-9e86d516478b
+
+xcrun altool --notarization-info 9bee14cb-7ef3-4d8b-80fd-9e86d516478b -username "frentreedev@gmail.com" --password "wqnv-bxzo-nzyk-gosp"
+
+
+xcrun stapler staple ./sign/PIMC_Mac_uninstall_1.0.3.pkg
