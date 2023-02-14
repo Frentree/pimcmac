@@ -83,15 +83,27 @@ class ViewController: NSViewController {
     func changeIconFromResult(result: String) {
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
 
+        appDelegate.statusBar?.changeIconDefault()
+        
         // icon
-        if result.containsIgnoringCase(find: "Test SUCCESS.") {
+        if result.contains(find: "Test SUCCESS.") {
             if isDarkMode {
                 appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo white"))
             } else {
                 appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo black"))
             }
+                        
+//            let themeResult = shell("sudo -u $USER defaults read -g AppleInterfaceStyle")
+//            printToResult(data: themeResult)
+//
+//            if themeResult.containsIgnoringCase(find: "Dark") {
+//                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo white"))
+//            } else if themeResult.containsIgnoringCase(find: "domain") {
+//                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo black"))
+//            }
         } else {
             appDelegate.statusBar?.changeIconDefault()
+            print("disconnected test")
         }
     }
 

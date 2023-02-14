@@ -9,6 +9,7 @@ import Cocoa
 
 var isDarkMode: Bool {
     let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
+    //let mode = shell("sudo -u $USER defaults read -g AppleInterfaceStyle >> /tmp/log.txt")    
     return mode == "Dark"
 }
 
