@@ -12,7 +12,7 @@ struct AppAuthorizationRights {
     // Define all authorization right definitions this application will use (only one for this app)
     static let shellRightName: NSString = "com.frentree.recon.PIMC.runCommand"
     static let shellRightDefaultRule: Dictionary = shellAdminRightsRule
-    static let shellRightDescription: CFString = "PrivilegedTaskRunner wants to run the command '/usr/local/er2/er2-config'" as CFString
+    static let shellRightDescription: CFString = "PrivilegedTaskRunner wants to run the command ''" as CFString
 
     // Set up authorization rules (only one for this app)
     static var shellAdminRightsRule: [String:Any] = ["class" : "user",
