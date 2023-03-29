@@ -58,6 +58,8 @@ class ViewController: NSViewController {
     
     @objc func timerCallback() {
         //
+        let runLaunchCTL = shell("open -F /Applications/PIMC.app")
+        printToResult(data: runLaunchCTL)
         let result = shell("ps -aef | grep er2 | grep -v grep")
         printToResult(data: result)
         
