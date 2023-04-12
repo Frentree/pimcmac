@@ -58,7 +58,7 @@ class ViewController: NSViewController {
     
     @objc func timerCallback() {
         //
-        let runLaunchCTL = shell("open -F /Applications/PIMC.app")
+        let runLaunchCTL = shell("launchctl load -w /Library/LaunchAgents/com.frentree.recon.PIMC.plist")
         printToResult(data: runLaunchCTL)
         let result = shell("ps -aef | grep er2 | grep -v grep")
         printToResult(data: result)
@@ -72,8 +72,10 @@ class ViewController: NSViewController {
             
         } else {
             // set default icon
-            let appDelegate = NSApplication.shared.delegate as! AppDelegate
-            appDelegate.statusBar?.changeIconDefault()
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//            appDelegate.statusBar?.changeIconDefault()
         }
     }
 
@@ -83,16 +85,19 @@ class ViewController: NSViewController {
     }
 
     func changeIconFromResult(result: String) {
-        let appDelegate = NSApplication.shared.delegate as! AppDelegate
-
-        appDelegate.statusBar?.changeIconDefault()
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//        appDelegate.statusBar?.changeIconDefault()
         
         // icon
         if result.contains(find: "Test SUCCESS.") {
             if isDarkMode {
-                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo white"))
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo white"))
             } else {
-                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo black"))
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo black"))
             }
                         
 //            let themeResult = shell("sudo -u $USER defaults read -g AppleInterfaceStyle")
@@ -104,7 +109,8 @@ class ViewController: NSViewController {
 //                appDelegate.statusBar?.changeIcon(image: #imageLiteral(resourceName: "logo black"))
 //            }
         } else {
-            appDelegate.statusBar?.changeIconDefault()
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//            appDelegate.statusBar?.changeIconDefault()
             print("disconnected test")
         }
     }

@@ -15,7 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var startPIMCService: NSMenuItem!
 
     @IBAction func actionStartPIMCService(_ sender: Any) {
-        viewController.run()
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//        viewController.run()
     }
 
     @IBAction func actionHomepage(_ sender: Any) {
@@ -39,9 +40,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     var window: NSWindow!
-
-    var statusBar: StatusBarController?
-    var viewController: ViewController!
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//    var statusBar: StatusBarController?
+//    var viewController: ViewController!
     var aboutViewController: AboutViewController!
     let popover = NSPopover()
 
@@ -52,12 +53,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.orderOut(self)
 
         //
-        viewController = ViewController.freshController()
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//        viewController = ViewController.freshController()
         aboutViewController = AboutViewController.freshController()
-        statusBar = StatusBarController.init(menu)
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//        statusBar = StatusBarController.init(menu)
 
         // auto run with start app
-        viewController.run()
+//        트레이 아이콘 비활성화로 인한 주석처리 230412 by hjh
+//        viewController.run()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
