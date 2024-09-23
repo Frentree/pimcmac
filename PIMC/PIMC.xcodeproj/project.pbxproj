@@ -8,15 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DC4F7713295D31F8009DD78C /* er2-2.5.0-osx-x64-a5ed567247f8eca796c978323d743187efc40071.pkg in Resources */ = {isa = PBXBuildFile; fileRef = DC4F7712295D31F8009DD78C /* er2-2.5.0-osx-x64-a5ed567247f8eca796c978323d743187efc40071.pkg */; };
-		F32C451428C0A827000A9FDE /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32C451328C0A827000A9FDE /* extension.swift */; };
-		F36EBD2928B8CA7400C0E8C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EBD2828B8CA7400C0E8C3 /* AppDelegate.swift */; };
-		F36EBD2B28B8CA7400C0E8C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EBD2A28B8CA7400C0E8C3 /* ViewController.swift */; };
 		F36EBD2D28B8CA7600C0E8C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36EBD2C28B8CA7600C0E8C3 /* Assets.xcassets */; };
 		F36EBD3028B8CA7600C0E8C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36EBD2E28B8CA7600C0E8C3 /* Main.storyboard */; };
-		F36EBD3828B8CAA600C0E8C3 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EBD3728B8CAA600C0E8C3 /* StatusBarController.swift */; };
-		F36EBD5328BC90BA00C0E8C3 /* AppAuthorizationRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36EBD5228BC90BA00C0E8C3 /* AppAuthorizationRights.swift */; };
-		F3E6453828C56D0C00BE4B6A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6453728C56D0C00BE4B6A /* AboutViewController.swift */; };
-		F3E6453A28C5B84100BE4B6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6453928C5B84100BE4B6A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -165,13 +158,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36EBD2B28B8CA7400C0E8C3 /* ViewController.swift in Sources */,
-				F3E6453828C56D0C00BE4B6A /* AboutViewController.swift in Sources */,
-				F36EBD3828B8CAA600C0E8C3 /* StatusBarController.swift in Sources */,
-				F3E6453A28C5B84100BE4B6A /* Constants.swift in Sources */,
-				F36EBD2928B8CA7400C0E8C3 /* AppDelegate.swift in Sources */,
-				F36EBD5328BC90BA00C0E8C3 /* AppAuthorizationRights.swift in Sources */,
-				F32C451428C0A827000A9FDE /* extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +297,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = JCATD8L33Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PIMC/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -341,11 +328,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = JCATD8L33Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PIMC/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
